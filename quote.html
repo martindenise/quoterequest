@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="quote.js">
+    </script>
+    <link rel="stylesheet" href="quote.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <h1 class="brand"><span>Casino</span> Event Quote</h1>
+        <div class="wrapper">
+            <div class="company-info">
+                <fieldset>
+                    <legend>Choose A Market</legend>
+                    <label for="arizona">
+                      <input type="radio" value="arizona" name="market" id="arizona"> <span>Arizona</span>
+                    </label>
+                    <label for="dallas">
+                        <input type="radio" value="dallas" name="market" id="dallas"> <span>Dallas</span>
+                      </label>
+                    <label for="losAngeles">
+                        <input type="radio" value="losAngeles" name="market" id="losAngeles"> <span>Los Angeles</span>
+                      </label>
+                    <label for="sanDiego">
+                        <input type="radio" value="sanDiego" name="market" id="sanDiego"> <span>San Diego</span>
+                      </label>
+                    <label for="northCarolina">
+                        <input type="radio" value="northCarolina" name="market" id="northCarolina"> <span>North Carolina</span>
+                      </label>
+
+                    <label for="vegas">
+                      <input type="radio" value="vegas" name="market" id="vegas"> <span>Las Vegas</span>
+                    </label>
+
+                    <label for="frisco">
+                      <input type="radio" value="frisco"  name="market" id="frisco" checked> <span>San Francisco</span>
+                    </label>
+
+                </fieldset>
+                <!--<h3>Quote Information For the Following Markets</h3>
+                <ul class="switches">
+                    <li>Arizona</li>
+                    <li>Los Angeles</li>
+                    <li>Los Vegas</li>
+                    <li>Dallas</li>
+                    <li>North Carolina</li>
+                    <li>San Francisco</li>
+                    <li>San Diego</li>
+                </ul>-->
+            </div>
+            <div class="contact">
+                <form action="eventquote.php" method="post">
+
+                    <h2>Host Details</h2>
+                    <p><label for="currentdate">Today's Date</label>
+                        <input type="date" id="currentdate " name="quotedate"></p>
+                    <p> <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="fname"></p>
+                    <p><label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lname"></p>
+                    <p><label for="hostcompany">Company</label>
+                        <input type="text" id="hostcompany" name="company"></p>
+                    <p><label for="contactphone">Contact Phone Number</label>
+                        <input type="phone" id="contactphone" name="phone"></p>
+                    <p><label for="altphone">Alternate Phone Number</label>
+                        <input type="phone" id="altphone" name="alternatephone"></p>
+                    <p><label for="eventdate">Event Date & Start Time</label>
+                        <input type="datetime-local" id="eventdate" name="eventdate"></p>
+                    <p><label for="eventlocatione ">Event Location</label>
+                        <input type="text " id="eventlocation " name="eventlocation "></p>
+
+                    <p><label for="eventend ">End Time of Event</label>
+                        <input type="time" id="eventend" name="end"></p>
+                    <p><label for="deliverytime">Delivery Time</label>
+                        <input type="time" id="deliverytime" name="deliverytime"></p>
+                    <p><label for="totaltime">Duration of Event</label>
+                        <input type="text" id="totaltime" name="totaltime" placeholder="3 Hours"></p>
+
+                    <fieldset class="games">
+                        <legend>
+                            <strong>Games</strong></legend>
+                        <!--<h4>Blackjack</h4>-->
+                        <label>Blackjack Tables</label><input type="number" min="0" max="100" placeholder="0">
+                        </input>
+                        <label>Blackjack Dealers</label><input type="number" min="0" max="100" placeholder="0">
+                        </input>
+                        <label>Poker Tables</label><input type="number" min="0" max="100" placeholder="0">
+                        </input>
+                        <label>Poker Dealers</label><input type="number" min="0" max="100" placeholder="0">
+                        </input>
+
+                        <label>Craps Tables</label><input type="number" min="0" max="100" placeholder="0">
+                        </input>
+                        <label>Craps Dealers</label><input type="number" min="0" max="100" placeholder="0">
+                        </input>
+                        <label>Roulette Tables</label><input type="number" min="0" max="100" placeholder="0">
+                        </input>
+                        <label>Roulette Dealers</label><input type="number" min="0" max="100" placeholder="0">
+                        </input>
+
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>
+                            <strong>Additional Services</strong></legend>
+                        <!--<h4>Blackjack</h4>-->
+                        <input type="checkbox">
+                        </input><label>DJ</label>
+                        <input type="checkbox">
+                        </input><label>Photo Booth</label>
+                        <input type="checkbox">
+                        </input><label>Custom Felts</label>
+                        <input type="checkbox"></input>
+                        <label>Bartender</label>
+
+                        <input type="checkbox">
+                        </input><label>Additional Games</label>
+                        <input type="checkbox">
+                        </input><label>Servers</label>
+                        <input type="checkbox">
+                        </input><label>Other</label>
+
+
+                    </fieldset>
+                    <!--<h2 class="full ">Games</h2>
+                        <p><label>Blackjack Tables</label>
+                            <input type="number " id="blackjack " name="bj "></p>
+                        <p><label>Blackjack Dealers</label>
+                            <input type="number " id="bjdealers " name="bjdealers "></p>
+                        <p><label for="poker ">Poker Tables</label>
+                            <input type="number " id="poker " name="pk "></p>
+                        <p><label for="pkdealers ">Poker Dealers</label>
+                            <input type="number " id="pkdealers " name="pkdealers "></p>
+                        <p><label for="craps ">Craps Tables</label>
+                            <input type="number " id="craps " name="cr "></p>
+                        <p><label for="crdealers ">Craps Dealers</label>
+                            <input type="number " id="crdealers " name="crdealers "></p>
+                        <p><label for="roulette ">Roulette</label>
+                            <input type="number " id="roulette " name="rlt "></p>
+                        <p><label for="rltdealers ">Roulette Dealers</label>
+                            <input type="number " id="rltdealers " name="rltdealers "></p>-->
+
+                    <!--<p class="full "><label for="addgames ">Additional Games</label>
+                        <textarea id="addgames " name="addgames " rows="5 "></p>
+
+                    <h2>Additional Services</h2>
+                    <p><label for="bartender ">Bartender</label>
+                        <input type="checkbox " id="bartender " name="bar "></p>
+                    <p><label for="photobooth ">Photo Booth</label>
+                        <input type="checkbox " id="photobooth " name="photo "></p>
+                    <p><label for="dj ">DJ</label>
+                        <input type="checkbox " id="dj " name="dj "></p>
+                    <p><label for="felts ">Custom Felts</label>
+                        <input type="checkbox " id="felts " name="felts "></p>
+                    <p class="full " id="othersvc " name="addsvc " rows="5 "></textarea>
+                    </p>-->
+
+
+                    <h2 class="full" style="text-align: center;">Additional Services Information & Event Details</h2>
+                    <p class="full">
+                        <textarea id="addinfo" name="detailinfo" rows="10"></textarea>
+                    </p><br>
+
+                    <h2 class="full ">Pricing</h2>
+                    <p><label for="currency-field ">Total Quote</label>
+                        <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$1,000,000.00"></p>
+                    <p><label for="depositpaid ">Deposit Paid</label>
+                        <input type="text " name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$1,000,000.00"></p>
+
+                    <p> <label for="balancedue"><strong>Balance Due</strong></label>
+                        <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$1,000,000.00"></p>
+                    <button class="full" type="submit">Generate Quote</button>
+            </div>
+        </div>
+    </div>
+    </form>
+
+</body>
+
+</html>
