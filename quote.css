@@ -1,0 +1,182 @@
+                                    * {
+                                        box-sizing: border-box;
+                                    }
+                                    
+                                    body {
+                                        background: #92bde7;
+                                        color: #485e74;
+                                        line-height: 1.6;
+                                        font-family: 'Segue UI', Tahoma, Geneva, Verdana, sans-serif;
+                                        padding: 1em;
+                                    }
+                                    
+                                    .container {
+                                        max-width: 1170px;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                        padding: 1em;
+                                    }
+                                    
+                                    [type="radio"] {
+                                        border: 0;
+                                        clip: rect(0 0 0 0);
+                                        height: 1px;
+                                        margin: -1px;
+                                        overflow: hidden;
+                                        padding: 0;
+                                        position: absolute;
+                                        width: 1px;
+                                    }
+                                    
+                                    .company-info label {
+                                        display: block;
+                                        cursor: pointer;
+                                        line-height: 2.5;
+                                        font-size: 1.5em;
+                                    }
+                                    
+                                    [type="radio"]+span {
+                                        display: block;
+                                    }
+                                    
+                                    [type="radio"]+span:before {
+                                        content: '';
+                                        display: inline-block;
+                                        width: 1em;
+                                        height: 1em;
+                                        vertical-align: -0.25em;
+                                        border-radius: 1em;
+                                        border: 0.125em solid darkblue;
+                                        box-shadow: 0 0 0 0.15em #000;
+                                        margin-right: 0.75em;
+                                        margin-left: 0.75em;
+                                        transition: 0.5s ease all;
+                                    }
+                                    
+                                    [type="radio"]:checked+span:before {
+                                        background: green;
+                                        box-shadow: 0 0 0 0.25em #000;
+                                    }
+                                    
+                                    [type="radio"]:focus+span:after {
+                                        content: '\0020\2190';
+                                        font-size: 1.5em;
+                                        line-height: 1;
+                                        vertical-align: -0.125em;
+                                    }
+                                    
+                                    .company-info fieldset {
+                                        font-size: 1em;
+                                        border: 2px solid royalblue;
+                                        padding: 2em;
+                                        border-radius: 0.5em;
+                                    }
+                                    
+                                    .company-info legend {
+                                        color: #fff;
+                                        background: darkblue;
+                                        padding: 0.25em 1em;
+                                        border-radius: 1em;
+                                    }
+                                    /*ul {
+                                list-style: none;
+                                padding: 0;
+                            }*/
+                                    
+                                    .brand {
+                                        text-align: center;
+                                    }
+                                    
+                                    .brand span {
+                                        color: #fff;
+                                    }
+                                    
+                                    .wrapper {
+                                        box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+                                    }
+                                    
+                                    .wrapper>* {
+                                        padding: 1em;
+                                    }
+                                    
+                                    .company-info {
+                                        background: #c9e6ff;
+                                    }
+                                    
+                                    .company-info h3,
+                                    .company-info ul,
+                                    h2 {
+                                        text-align: center;
+                                        margin: 0 0 1rem 0;
+                                    }
+                                    
+                                    .contact {
+                                        background: #f9feff;
+                                    }
+                                    
+                                    .contact form {
+                                        display: grid;
+                                        grid-template-columns: 1fr 1fr;
+                                        grid-gap: 20px;
+                                    }
+                                    
+                                    .contact form label {
+                                        display: block;
+                                    }
+                                    
+                                    .contact form p {
+                                        margin: 0;
+                                    }
+                                    
+                                    fieldset {
+                                        display: inline-grid;
+                                        grid-template-columns: 1fr 1fr;
+                                    }
+                                    
+                                    .games input {
+                                        width: auto;
+                                        height: 20%;
+                                    }
+                                    
+                                    .contact form .full {
+                                        grid-column: 1 / 3;
+                                    }
+                                    
+                                    .contact form button,
+                                    .contact form input,
+                                    .contact form textarea {
+                                        width: 100%;
+                                        padding: 1em;
+                                        border: 1px solid #c9e6ff;
+                                    }
+                                    
+                                    .contact form button {
+                                        background: #c9e6ff;
+                                        border: 0;
+                                        text-transform: uppercase;
+                                    }
+                                    
+                                    .contact form button:hover,
+                                    .contact form button:focus {
+                                        background: #92bde7;
+                                        color: #fff;
+                                        outline: 0;
+                                        transition: background-color 2s ease-out;
+                                    }
+                                    /*wide screens*/
+                                    
+                                    @media(min-width: 700px) {
+                                        .wrapper {
+                                            display: grid;
+                                            /*grid-template-columns: 1fr 3fr;*/
+                                        }
+                                        .wrapper>* {
+                                            padding: 2em;
+                                        }
+                                        .company-info h3,
+                                        .company-info ul,
+                                        h2,
+                                        .brand {
+                                            text-align: left;
+                                        }
+                                    }
